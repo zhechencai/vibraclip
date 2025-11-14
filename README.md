@@ -67,13 +67,13 @@ VibraCLIP considers different scenarios for training, depending on the included 
 To train VibraCLIP only on the Graph-IR relationship, use the following command:
 
 ```bash
-python main_ir.py --config-name config.yaml
+CUDA_VISIBLE_DEVICES=0 python main_ir.py --config-name config.yaml
 ```
 
 Then, to train VibraCLIP on the Graph-IR-Raman relationships, use the following command:
 
 ```bash
-python main_ir_raman.py --config-name config.yaml
+CUDA_VISIBLE_DEVICES=0 python main_ir_raman.py --config-name config.yaml
 ```
 
 Note that both models can be trained using the same `config.yaml` file.
