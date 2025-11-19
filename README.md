@@ -60,8 +60,9 @@ To train VibraCLIP, we use [hydra](https://hydra.cc/) to configure the model's h
 
 ### Evaluation
 To use the same evaluation method as Spectriever:
-```python
+```bash
 python evaluate_retrieval.py --pkl path/to/your/file.pkl
+```
 
 > #### NOTE:
 > Please, change the experiment id inside the `config.yaml` file with a lable that tracks your experiments as (e.g., `id: "vibraclip_graph_ir_mass_01"`).
