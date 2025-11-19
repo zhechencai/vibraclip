@@ -58,6 +58,11 @@ This method automatically generates the molecular graph representations and stor
 ### Training VibraCLIP
 To train VibraCLIP, we use [hydra](https://hydra.cc/) to configure the model's hyperparameters and training settings through the `config.yaml` file stored in the `configs` folder. We provide the general configuration file `config.yaml` for pre-training the model and the `config_ft.yaml` for the fine-tuning (realignment) stage with the QM9S external dataset from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) and experimental data. We refer the user to check all the hyperparameters used in our work within the yaml files.
 
+### Evaluation
+To use the same evaluation method as Spectriever:
+```python
+python evaluate_retrieval.py --pkl path/to/your/file.pkl
+
 > #### NOTE:
 > Please, change the experiment id inside the `config.yaml` file with a lable that tracks your experiments as (e.g., `id: "vibraclip_graph_ir_mass_01"`).
 > Also, inside the `paths` the `root_dir` tag should be changed to the path where `vibraclip` is cloned (e.g., `root_dir: "/home/USER/vibraclip"`).
